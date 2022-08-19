@@ -10,15 +10,25 @@ namespace LinqEg
     {
         public static List<Product> products = new List<Product>();
         //Product p = new Product();
+
+        
         public static void Main()
         {
+            //products = Product.getallprods();
+            //foreach (var product in products)
+            //{
+            //    Console.WriteLine(product.ToString());
+            //}
+            //Product p = Product.getprodbyId(3);
+            //Console.WriteLine(p.ToString());
+            //Console.WriteLine();
+            Product.AddProd();
             products = Product.getallprods();
             foreach (var product in products)
             {
                 Console.WriteLine(product.ToString());
             }
-            Product p = Product.getprodbyId(3);
-            Console.WriteLine(p.ToString());
+
         }
     }
 }

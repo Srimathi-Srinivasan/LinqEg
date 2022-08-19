@@ -37,7 +37,7 @@ namespace LinqEg
             //}
             return prod;
         }
-
+        
         public static Product getprodbyId(int pid)
         {
             //var product = (from p in prod
@@ -45,6 +45,16 @@ namespace LinqEg
             //              select p).SingleOrDefault();
             var product = prod.Where(x => x.Pid == pid).Select(x => x).SingleOrDefault();
             return product;
+        }
+
+        public static void AddProd()
+        {
+            Console.WriteLine("Enter Pid,Pname and Price: ");
+            Product p = new Product();
+            p.Pid = Convert.ToInt32(Console.ReadLine());
+            p.Pname = Console.ReadLine();
+            p.Price = Convert.ToInt32(Console.ReadLine());
+            prod.Add(p);
         }
         public override string ToString()
         {
